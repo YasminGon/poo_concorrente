@@ -27,11 +27,15 @@ public void run(){
     for (int i = 0; i < numeroInteracoes; i++) {
         System.out.println("Processo: (" +this.nome+ "):"+i);
         //yield();
-    }
+
+        try{
+            Thread.sleep(i*100);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    } 
 }
 }
 
 
-//método run, no corpo dele estrutura de repetição
-//10 interaçãoes
-//nome e as interações 
+
